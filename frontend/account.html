@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BreatheClo | My Orders</title>
+    <link rel="icon" href="images/Group 4.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+</head>
+<body>
+
+    <main class="account">
+        <h1>MY ORDERS</h1>
+        <p class="acc-sub" id="acc-sub">Checking your login...</p>
+
+        <div class="acc-state" id="acc-login" hidden>
+            <p>Please log in to see your orders.</p>
+            <a class="btn-dark" href="login.html?next=account.html">LOG IN</a>
+        </div>
+        <div class="acc-state" id="acc-empty" hidden>
+            <p>You haven't placed any orders yet.</p>
+            <a class="btn-dark" href="shop.html">START SHOPPING</a>
+        </div>
+        <div class="acc-state" id="acc-error" hidden><p id="acc-error-text"></p></div>
+
+        <div id="acc-list"></div>
+    </main>
+
+    <div id="bc-footer"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/pages/account.js"></script>
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>

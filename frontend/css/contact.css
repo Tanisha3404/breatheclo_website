@@ -1,0 +1,109 @@
+/*contact section*/
+.announcement-bar{
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 8px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    font-family: 'Inter-regular';
+}
+
+/*contact section*/
+.contact-section{
+    width: 100%;
+    max-width: 800px;
+    margin: 200px auto;
+    text-align: center;
+}
+.contact-section h2{
+    margin-bottom: 50px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Heading-pro';
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    gap: 25px;
+}
+.input-group{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+label{
+    font-family: 'Inter-regular';
+    text-align: left;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+input, textarea{
+    border: none;
+    border-bottom: 2px solid #000;
+    padding: 5px 0;
+    outline: none;
+    background: transparent;
+}
+.full-width{
+    width: 100%;
+}
+button{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 15px 0;
+    font-size: 14px;
+    cursor: pointer;
+    width: 300px;
+    letter-spacing: 1px;
+    margin: 20px auto;
+    border-radius: 5px;
+    font-family: 'Inter-semibold';
+}
+
+/*footer section*/
+
+/*footer parallex section*/
+
+/*Responsive design on different screens*/
+
+
+@media (max-width: 768px) {
+
+    /*header section*/
+
+    /*contact section*/
+    .contact-section{
+        font-size: 20px;
+    }
+    .input-group{
+        flex-direction: column;
+        padding: 40px;
+        gap: 30px;
+    }
+    input,textarea{
+        font-size: 14px;
+    }
+    .full-width{
+        margin-top: -80px;
+        padding: 40px;
+    }
+    button{
+        margin-top: -30px;
+        font-size: 13px;
+        margin-bottom: -40px;
+    }
+    /*footer section*/
+}

@@ -1,0 +1,24 @@
+body { margin: 0; font-family: 'Inter-regular', sans-serif; color: #000; background: #fff; }
+.account { max-width: 760px; margin: 0 auto; padding: 120px 20px 60px; min-height: 70vh; }
+.account h1 { font-family: 'Heading-pro', 'Inter-semibold', sans-serif; font-size: clamp(26px, 4vw, 44px); margin: 0 0 6px; }
+.acc-sub { margin: 0 0 24px; color: #555; font-size: 13px; }
+.acc-state { text-align: center; padding: 50px 0; }
+.acc-state p { margin: 0 0 16px; }
+.order { border: 1px solid #000; margin-bottom: 18px; }
+.order header { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid #000; }
+.order header small { display: block; color: #666; font-size: 12px; margin-top: 2px; }
+.status { font: 11px 'Inter-medium', sans-serif; letter-spacing: .08em; text-transform: uppercase; padding: 5px 10px; border: 1px solid #000; }
+.status.placed, .status.confirmed { background: #fff; }
+.status.shipped { background: #000; color: #fff; }
+.status.delivered { background: #1b6e3c; color: #fff; border-color: #1b6e3c; }
+.status.cancelled { background: #b3261e; color: #fff; border-color: #b3261e; }
+.line { display: grid; grid-template-columns: 56px 1fr auto; gap: 12px; align-items: center; padding: 12px 16px; border-bottom: 1px solid #eee; font-size: 13px; text-transform: uppercase; }
+.line img { width: 56px; aspect-ratio: 3 / 4; object-fit: cover; }
+.line small { display: block; color: #666; text-transform: none; margin-top: 3px; }
+.order footer { display: flex; justify-content: space-between; padding: 14px 16px; font-size: 13px; background: #fafafa; }
+@media (max-width: 768px) { .account { padding-top: 104px; } }
+
+.cancel-row { padding: 12px 16px; border-top: 1px solid #eee; text-align: right; }
+.cancel-btn { font: 12px 'Inter-medium', sans-serif; letter-spacing: .08em; text-transform: uppercase; padding: 9px 16px; border: 1px solid #b3261e; color: #b3261e; background: #fff; cursor: pointer; }
+.cancel-btn:hover { background: #b3261e; color: #fff; }
+.cancel-btn:disabled { opacity: .5; cursor: wait; }

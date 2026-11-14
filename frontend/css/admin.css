@@ -1,0 +1,56 @@
+* { box-sizing: border-box; }
+body { margin: 0; font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #111; background: #f6f6f4; }
+.ad-top { display: flex; align-items: center; gap: 16px; padding: 12px 20px; background: #000; color: #fff; position: sticky; top: 0; z-index: 5; }
+.ad-top strong { letter-spacing: .08em; }
+.ad-top #ad-who { margin-left: auto; font-size: 12px; opacity: .75; }
+.ad-top a { color: #fff; font-size: 13px; }
+button { font: inherit; cursor: pointer; border: 1px solid #111; background: #fff; padding: 7px 12px; border-radius: 4px; }
+button:hover { background: #eee; }
+button.primary { background: #111; color: #fff; }
+button.primary:hover { background: #333; }
+button.danger { color: #b3261e; border-color: #b3261e; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+.ad-top button { background: transparent; color: #fff; border-color: #888; }
+main { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.ad-gate { text-align: center; padding-top: 80px; }
+.ad-gate code { background: #fff; border: 1px solid #ccc; padding: 4px 8px; user-select: all; word-break: break-all; }
+.ad-gate a.btn { display: inline-block; background: #111; color: #fff; padding: 10px 18px; border-radius: 4px; text-decoration: none; margin-top: 12px; }
+.ad-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 20px; }
+.stat { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 14px; }
+.stat b { display: block; font-size: 22px; margin-top: 2px; }
+.stat span { font-size: 12px; color: #666; }
+.stat.warn b { color: #b3261e; }
+.ad-tabs { display: flex; gap: 6px; margin-bottom: 14px; border-bottom: 1px solid #ccc; }
+.ad-tabs button { border: 0; border-bottom: 3px solid transparent; border-radius: 0; background: none; padding: 10px 14px; }
+.ad-tabs button.on { border-bottom-color: #111; font-weight: 600; }
+.ad-bar { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.ad-bar label { display: flex; align-items: center; gap: 8px; }
+.ad-scroll { overflow-x: auto; background: #fff; border: 1px solid #ddd; border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; min-width: 720px; }
+th, td { padding: 9px 10px; text-align: left; border-bottom: 1px solid #eee; vertical-align: middle; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: #555; background: #fafafa; }
+td img { width: 40px; height: 52px; object-fit: cover; border-radius: 3px; display: block; }
+td input[type=number] { width: 72px; padding: 5px; }
+select, input, textarea { font: inherit; padding: 7px 8px; border: 1px solid #bbb; border-radius: 4px; background: #fff; }
+tr.detail td { background: #fafafa; font-size: 13px; }
+.muted { color: #777; font-size: 12px; }
+.chip { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 12px; background: #eee; }
+.chip.low { background: #fde7e5; color: #b3261e; }
+.msg { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 14px; margin-bottom: 10px; }
+.msg.done { opacity: .55; }
+.msg header { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+.msg p { margin: 6px 0; white-space: pre-wrap; }
+dialog { border: 1px solid #111; border-radius: 8px; padding: 0; width: min(680px, 94vw); max-height: 92vh; }
+dialog::backdrop { background: rgba(0, 0, 0, .45); }
+#p-form { padding: 20px; display: grid; gap: 12px; }
+#p-form h2 { margin: 0; }
+#p-form label { display: grid; gap: 4px; font-size: 12px; color: #444; }
+#p-form .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+#p-form fieldset { border: 1px solid #ccc; border-radius: 4px; }
+#p-form label.inline { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #111; }
+#p-form .row { display: flex; justify-content: flex-end; gap: 10px; }
+.err { color: #b3261e; margin: 0; min-height: 1em; }
+#bc-toasts { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); z-index: 100; display: grid; gap: 8px; }
+.bc-toast { background: #111; color: #fff; padding: 10px 16px; border-radius: 4px; font-size: 13px; }
+.bc-toast.error { background: #b3261e; }
+@media (max-width: 700px) { main { padding: 12px; } .ad-top { flex-wrap: wrap; gap: 8px 14px; } }

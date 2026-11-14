@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BreatheClo | Checkout</title>
+    <link rel="icon" href="images/Group 4.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+</head>
+<body>
+
+    <main class="checkout">
+        <!-- empty cart -->
+        <section class="co-state" id="co-empty" hidden>
+            <h1>YOUR CART IS EMPTY</h1>
+            <p>Add something you like before checking out.</p>
+            <a class="btn-dark" href="shop.html">CONTINUE SHOPPING</a>
+        </section>
+
+        <!-- order placed -->
+        <section class="co-state" id="co-done" hidden>
+            <h1>ORDER PLACED</h1>
+            <p>Thank you<span id="done-name"></span>! Your order number is <strong id="done-id"></strong>.</p>
+            <p>You'll pay <strong id="done-total"></strong> on delivery. We'll contact you on <strong id="done-phone"></strong> to confirm.</p>
+            <a class="btn-dark" href="shop.html">CONTINUE SHOPPING</a>
+        </section>
+
+        <!-- checkout form -->
+        <div class="co-grid" id="co-main" hidden>
+            <form id="co-form" class="co-form" novalidate>
+                <h1>CHECKOUT</h1>
+
+                <div class="co-login" id="co-login" role="alert" hidden>
+                    <b>Please log in to place your order</b>
+                    <p>Your cart and the details you entered are saved. You will come back to this page after logging in.</p>
+                    <div><a class="btn-dark" id="co-login-link" href="login.html?next=checkout.html">LOG IN</a> <a class="btn-light" id="co-signup-link" href="signin.html?next=checkout.html">SIGN UP</a></div>
+                </div>
+
+                <fieldset>
+                    <legend>CONTACT</legend>
+                    <div class="field"><label for="co-name">Full name</label><input id="co-name" name="name" autocomplete="name" required><small class="err"></small></div>
+                    <div class="row">
+                        <div class="field"><label for="co-email">Email</label><input id="co-email" name="email" type="email" autocomplete="email" required><small class="err"></small></div>
+                        <div class="field"><label for="co-phone">Phone (10 digits)</label><input id="co-phone" name="phone" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel-national" required><small class="err"></small></div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>SHIPPING ADDRESS</legend>
+                    <div class="field"><label for="co-line1">Address</label><input id="co-line1" name="line1" autocomplete="address-line1" required><small class="err"></small></div>
+                    <div class="field"><label for="co-line2">Apartment, landmark (optional)</label><input id="co-line2" name="line2" autocomplete="address-line2"></div>
+                    <div class="row">
+                        <div class="field"><label for="co-city">City</label><input id="co-city" name="city" autocomplete="address-level2" required><small class="err"></small></div>
+                        <div class="field"><label for="co-state">State</label><input id="co-state" name="state" autocomplete="address-level1" required><small class="err"></small></div>
+                        <div class="field"><label for="co-pin">PIN code</label><input id="co-pin" name="pin" inputmode="numeric" maxlength="6" autocomplete="postal-code" required><small class="err"></small></div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>PAYMENT</legend>
+                    <label class="pay on"><input type="radio" name="payment" value="cod" checked> <span>Cash on delivery</span></label>
+                    <label class="pay off"><input type="radio" name="payment" value="online" disabled> <span>Pay online (UPI / cards)</span> <em>coming soon</em></label>
+                </fieldset>
+
+                <button class="btn-dark place" id="co-submit" type="submit">PLACE ORDER</button>
+                <p class="co-fine">By placing your order you agree to our <a href="terms.html">Terms</a> and <a href="returnexchange.html">Return policy</a>.</p>
+            </form>
+
+            <aside class="co-summary" aria-label="Order summary">
+                <h2>ORDER SUMMARY</h2>
+                <div id="co-items"></div>
+                <dl>
+                    <div><dt>Subtotal</dt><dd id="co-sub"></dd></div>
+                    <div><dt>Shipping</dt><dd>FREE</dd></div>
+                    <div class="tot"><dt>Total</dt><dd id="co-total"></dd></div>
+                </dl>
+                <a class="co-edit" href="shop.html">&larr; Continue shopping</a>
+            </aside>
+        </div>
+    </main>
+
+    <div id="bc-footer"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/pages/checkout.js"></script>
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>

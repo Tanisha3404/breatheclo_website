@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BreatheClo | Shop All</title>
+    <link rel="icon" href="images/Group 4.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+</head>
+<body>
+
+    <main class="shop">
+        <div class="shop-head">
+            <div>
+                <p class="shop-kicker">[2025]</p>
+                <h1 id="shop-title">SHOP ALL</h1>
+                <p class="shop-sub" id="shop-sub"></p>
+            </div>
+            <label class="sort">
+                <span>SORT</span>
+                <select id="sort">
+                    <option value="featured">Featured</option>
+                    <option value="new">Newest</option>
+                    <option value="low">Price: low to high</option>
+                    <option value="high">Price: high to low</option>
+                    <option value="az">Name: A to Z</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="chips" id="chips" role="tablist" aria-label="Filter products"></div>
+
+        <div class="shop-grid" id="grid"></div>
+
+        <div class="shop-empty" id="empty" hidden>
+            <h2 id="empty-title">NOTHING HERE YET</h2>
+            <p id="empty-text">No products match this filter.</p>
+            <a class="btn-dark" href="shop.html">VIEW ALL PRODUCTS</a>
+        </div>
+    </main>
+
+    <div id="bc-footer"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/pages/shop.js"></script>
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>

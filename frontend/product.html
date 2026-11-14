@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="icon" href="images/Group 4.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+    <title>BreatheClo | Product</title>
+</head>
+<body>
+
+    <!--product section-->
+    <main class="product-container" id="product-root">
+        <div class="product-images">
+            <div class="image-slider" id="gallery" tabindex="0" aria-label="Product photos"></div>
+            <div class="gallery-nav" id="gallery-nav" hidden>
+                <button type="button" id="g-prev" aria-label="Previous photo">&larr;</button>
+                <span id="g-count">1 / 1</span>
+                <button type="button" id="g-next" aria-label="Next photo">&rarr;</button>
+            </div>
+        </div>
+        <div class="product-details">
+            <p class="crumb"><a href="shop.html">SHOP</a> / <a id="crumb-cat" href="shop.html"></a></p>
+            <h1 id="product-title">Loading...</h1>
+            <p id="product-price"></p>
+            <p id="product-description"></p>
+
+            <div class="size-block">
+                <div class="size-head"><h3>SIZE</h3><span id="size-msg" role="status"></span></div>
+                <div class="sizes" id="sizes" role="radiogroup" aria-label="Select size"></div>
+            </div>
+
+            <div class="qty-row">
+                <h3>QUANTITY</h3>
+                <div class="qty-picker">
+                    <button type="button" id="q-dec" aria-label="Decrease quantity">&minus;</button>
+                    <span id="q-val">1</span>
+                    <button type="button" id="q-inc" aria-label="Increase quantity">+</button>
+                </div>
+            </div>
+
+            <button class="add-to-cart" type="button">ADD TO CART</button>
+            <p class="ship-note">FREE SHIPPING &bull; CASH ON DELIVERY AVAILABLE</p>
+
+            <h3>Product Specification</h3>
+            <ul id="product-specs"></ul>
+        </div>
+    </main>
+
+    <div class="not-found" id="not-found" hidden>
+        <h1>PRODUCT NOT FOUND</h1>
+        <p>We couldn't find that product. It may have been removed.</p>
+        <a class="btn-dark" href="shop.html">BACK TO SHOP</a>
+    </div>
+
+    <!--more product section-->
+    <div class="winter-content">
+        <div class="background-text">
+            <span class="outline">BREATHE CLOTHING</span>
+            <span class="breathe">BREATHE</span>
+            <span class="clothing">CLOTHING</span>
+        </div>
+        <div class="centered-image">
+            <img src="images/modal.jpg" alt="">
+        </div>
+    </div>
+
+    <section class="product-section related" id="related-section" hidden>
+        <h2 class="related-title">YOU MAY ALSO LIKE</h2>
+        <div class="product-grid" id="related"></div>
+    </section>
+
+    <div id="bc-footer"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/pages/product.js"></script>
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>

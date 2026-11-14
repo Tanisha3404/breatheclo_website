@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>BreatheClo | Admin</title>
+    <link rel="icon" href="images/Group 4.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <header class="ad-top">
+        <strong>BREATHECLO ADMIN</strong>
+        <span id="ad-who"></span>
+        <a href="index.html">View site</a>
+        <button type="button" id="ad-logout" hidden>Log out</button>
+    </header>
+
+    <main id="ad-gate" class="ad-gate"><p>Checking your login...</p></main>
+
+    <main id="ad-app" hidden>
+        <section class="ad-stats" id="ad-stats"></section>
+
+        <nav class="ad-tabs" id="ad-tabs">
+            <button type="button" data-tab="orders" class="on">Orders</button>
+            <button type="button" data-tab="products">Products</button>
+            <button type="button" data-tab="messages">Messages</button>
+            <button type="button" data-tab="subscribers">Subscribers</button>
+        </nav>
+
+        <section id="tab-orders">
+            <div class="ad-bar">
+                <label>Status
+                    <select id="o-filter"><option value="">All</option><option>placed</option><option>confirmed</option><option>shipped</option><option>delivered</option><option>cancelled</option></select>
+                </label>
+                <button type="button" id="o-refresh">Refresh</button>
+            </div>
+            <div class="ad-scroll"><table id="o-table"></table></div>
+        </section>
+
+        <section id="tab-products" hidden>
+            <div class="ad-bar"><button type="button" id="p-add" class="primary">+ Add product</button></div>
+            <div class="ad-scroll"><table id="p-table"></table></div>
+        </section>
+
+        <section id="tab-messages" hidden><div id="m-list"></div></section>
+
+        <section id="tab-subscribers" hidden>
+            <div class="ad-bar"><span id="s-count"></span><button type="button" id="s-copy">Copy all emails</button></div>
+            <div class="ad-scroll"><table id="s-table"></table></div>
+        </section>
+    </main>
+
+    <dialog id="p-dialog">
+        <form id="p-form" method="dialog" novalidate>
+            <h2 id="p-title">Add product</h2>
+            <div class="grid">
+                <label>ID (used in the link, e.g. gd6)<input name="id" required maxlength="40"></label>
+                <label>Title<input name="title" required maxlength="120"></label>
+                <label>Price (₹)<input name="price" type="number" min="0" step="1" required></label>
+                <label>Stock<input name="stock" type="number" min="0" step="1" required></label>
+                <label>Category
+                    <select name="category"><option value="tshirt">T-shirt</option><option value="shirt">Shirt</option><option value="sweatshirt">Sweatshirt</option><option value="cordset">Co-ord set</option><option value="accessories">Accessories</option></select>
+                </label>
+                <fieldset><legend>Options</legend>
+                    <label class="inline"><input type="checkbox" name="tag-graphic"> Graphic tee</label>
+                    <label class="inline"><input type="checkbox" name="tag-puff"> Puff print</label>
+                    <label class="inline"><input type="checkbox" name="isNew"> New arrival</label>
+                    <label class="inline"><input type="checkbox" name="active" checked> Visible in shop</label>
+                </fieldset>
+            </div>
+            <label>Images (one per line, e.g. images/gd6-1.jpg: first one is the main photo)<textarea name="images" rows="3" required></textarea></label>
+            <label>Description<textarea name="description" rows="3"></textarea></label>
+            <label>Specifications (one per line)<textarea name="specs" rows="3"></textarea></label>
+            <p class="err" id="p-err"></p>
+            <div class="row"><button type="button" id="p-cancel">Cancel</button><button type="submit" class="primary" id="p-save">Save product</button></div>
+        </form>
+    </dialog>
+
+    <div id="bc-toasts"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/pages/admin.js"></script>
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>

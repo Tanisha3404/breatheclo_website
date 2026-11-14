@@ -1,0 +1,63 @@
+/*return & exchange section*/
+.returnexchange-policy{
+    width: 100%;
+    max-width: 1200px;
+    margin: 150px auto;
+    text-align: center;
+}
+.returnexchange-policy h1{
+    font-size: 24px;
+    font-family: 'Heading-pro';
+    text-transform: uppercase;
+}
+.returnexchange-container{
+    width: 100%;
+    max-width: 1300px;
+    margin: -100px auto;
+    font-family: 'Inter-regular';
+}
+.returnexchange-container h2{
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 40px;
+    font-family: 'Inter-bold';
+    text-align: left;
+}
+.returnexchange-container p{
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.returnexchange-container ul{
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+.returnexchange-container ul li{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.returnexchange-container ul li a{
+    text-decoration: none;
+    color: #000;
+}
+.returnexchange-container ul li a:hover{
+    text-decoration: underline;
+}
+
+
+/*footer section*/
+.bar{
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 150px;
+    position: relative;
+    width: 100%;
+    padding: 1.25rem;
+}
+
+/*footer parallex section*/
+
+/*Responsive design on different screens*/
