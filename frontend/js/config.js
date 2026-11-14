@@ -10,6 +10,6 @@ window.BC = window.BC || {};
   BC.config = {
     API_BASE: isLocal ? (location.port === "5000" ? "" : "http://localhost:5000") : PRODUCTION_API,
 
-    USE_API: isLocal || !!PRODUCTION_API
+    USE_API: isLocal || !!PRODUCTION_API || /\.onrender\.com$/.test(host)
   };
 })();
